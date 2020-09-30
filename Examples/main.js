@@ -46,7 +46,7 @@ function setRawDataOfCustomers(arg) {
 setRawDataOfCustomers(rawCustomerData);
 
 function update(customerID, year, month, amount) {
-    setUsage(customerID, year, month, amount);
+    getCustomerData().setUsage(customerID, year, month, amount);
 }
 
 function compareUsage(customerID, laterYear, month) {
