@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { organization, H1, updateName } = require('main');
+const { organization, H1, updateName } = require('./main');
 
 describe('H1', () => {
     it('', () => {

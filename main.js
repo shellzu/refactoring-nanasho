@@ -9,4 +9,3 @@ exports.H1 = function H1() {
 exports.updateName = function updateName(newName) {
     organization.name = newName;
 };
-
