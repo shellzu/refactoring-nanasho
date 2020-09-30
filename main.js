@@ -1,13 +1,24 @@
-organization = {name: "Acme Gooseberries", country: "GB"};
+class Organization {
+    constructor(data) {
+        this._data = data;
+    }
+}
 
+const organization = new Organization({name: "Acme Gooseberries", country: "GB"})
 
+function getRawDataOfOrganization() {
+    return organization._data;
+}
+function getOrganization() {
+    return organization;
+}
 function H1() {
-    const result = `<h1>${organization.name}</h1>`;
+    const result = `<h1>${getRawDataOfOrganization().name}</h1>`;
     return result;
 };
 
 function updateName(newName) {
-    organization.name = newName;
+    getRawDataOfOrganization().name = newName;
 };
 
 exports.organization = organization;

@@ -8,7 +8,7 @@ describe('H1', () => {
 });
 
 describe('updateName', () => {
-    if('', () => {
+    it('', () => {
         updateName("Hoge");
         expect(organization.name).to.equal("Hoge");
     });
