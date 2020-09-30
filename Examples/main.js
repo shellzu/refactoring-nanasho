@@ -41,7 +41,7 @@ function getCustomerData() {
 }
 
 function getRawDataOfCustomers() {
-    return customerData._data;
+    return customerData.rawData;
 }
 
 function setRawDataOfCustomers(arg) {
