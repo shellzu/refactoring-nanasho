@@ -1,4 +1,4 @@
-const customerData = {
+const rawCustomerData = {
     "1920": {
       name: "martin",
       id: "1920",
@@ -24,6 +24,8 @@ class CustomerData {
     }
 }
 
+let customerData;
+
 function getCustomerData() {
     return customerData;
 }
@@ -35,6 +37,9 @@ function getRawDataOfCustomers() {
 function setRawDataOfCustomers(arg) {
     customerData = new CustomerData(arg);
 }
+
+// CustomerDataクラスを初期化
+setRawDataOfCustomers(rawCustomerData);
 
 function update(customerID, year, month, amount) {
   getRawDataOfCustomers()[customerID].usages[year][month] = amount;
