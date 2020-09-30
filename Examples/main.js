@@ -18,13 +18,22 @@ const customerData = {
       id: "38673",
     }
 };
-
-function getRawDataOfCustomers(arg) {
-    return customerData = arg;
+class CustomerData {
+    constructor(data) {
+        this._data = data;
+    }
 }
 
-function setRawDataOfCustomers() {
-    
+function getCustomerData() {
+    return customerData;
+}
+
+function getRawDataOfCustomers() {
+    return customerData._data;
+}
+
+function setRawDataOfCustomers(arg) {
+    customerData = new CustomerData(arg);
 }
 
 function update(customerID, year, month, amount) {
