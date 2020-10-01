@@ -26,11 +26,7 @@ class CustomerData {
     }
 
 get rawData() {
-    return _.cloneDeep(this.data);
-}
-
-usage(customerID, year, month) {
-    return this._data[customerID].usages[year][month];
+    return _.cloneDeep(this._data);
 }
 
     setUsage(customerID, year, month, amount) {
@@ -60,8 +56,8 @@ function update(customerID, year, month, amount) {
 }
 
 function compareUsage(customerID, laterYear, month) {
-  const later = getCustomerData().usage(customerID, laterYear, month);
-  const earlier = getCustomerData().usage(customerID, laterYear - 1, month);
+  const later = getCustomerData().rawData[customerID].usages[laterYear][month];
+  const earlier = getCustomerData().rawData[customerID].usages[laterYear - 1][month];
   return { laterAmount: later, change: later - earlier };
 }
 
