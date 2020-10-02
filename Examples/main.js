@@ -40,10 +40,6 @@ function getCustomerData() {
     return customerData;
 }
 
-function getRawDataOfCustomers() {
-    return customerData.rawData;
-}
-
 function setRawDataOfCustomers(arg) {
     customerData = new CustomerData(arg);
 }
