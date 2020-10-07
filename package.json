@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
     "mocha": "^8.1.3"
