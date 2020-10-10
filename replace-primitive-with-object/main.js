@@ -18,7 +18,7 @@ class Priority {
     }
     toString() {return this._value;}
     get _index() {return Priority.legalValues().findIndex(s => s === this._value);}
-    static legalValues() {returnb['low', 'normal', 'high', 'rush'];}
+    static legalValues() {return ['low', 'normal', 'high', 'rush'];}
 
     equals(other) {return this._index === other._index;}
     higherThan(other) {return this._index > other._index;}
@@ -34,3 +34,4 @@ function getHighPriorityCount(orders) {
 
 exports.Order = Order;
 exports.getHighPriorityCount = getHighPriorityCount;
+exports.Priority = Priority;
