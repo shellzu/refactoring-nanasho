@@ -27,7 +27,7 @@ class Priority {
 
 function getHighPriorityCount(orders) {
     highPriorityCount = orders.filter(
-        o => "high" === o.priority || "rush" === o.priority
+        o => o.priority.higherThan(new Priority("normal"))
         ).length;
     return highPriorityCount;
 }
